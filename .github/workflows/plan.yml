@@ -14,6 +14,10 @@ jobs:
     runs-on: [self-hosted, no-aws-creds-runner]
 
     steps:
+      - name: aws sts
+        run: aws sts get-caller-identity
+        shell: bash 
+        
       - name: digger run
         uses: diggerhq/digger@no-aws-creds
         with:
