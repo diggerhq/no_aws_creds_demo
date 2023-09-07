@@ -21,9 +21,7 @@ jobs:
       - name: digger run
         uses: diggerhq/digger@no-aws-creds
         with:
-          setup-aws: true
-          role-to-assume: arn:aws:iam::209539466991:role/GitHubActionsRole
-          aws-region: us-east-1
+          setup-aws: false
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
