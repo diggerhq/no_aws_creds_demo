@@ -19,7 +19,7 @@ jobs:
         shell: bash 
         
       - name: digger run
-        uses: diggerhq/digger@v0.1.31
+        uses: diggerhq/digger@no-aws-creds
         with:
           setup-aws: false
         env:
