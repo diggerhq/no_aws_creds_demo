@@ -28,6 +28,8 @@ jobs:
         uses: diggerhq/digger@no-aws-creds
         with:
           setup-aws: false
+          setup-terraform: true
+
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
